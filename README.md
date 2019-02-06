@@ -12,3 +12,33 @@
 2. [Electronics_wing](https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c)
 3. [Odroid](https://wiki.odroid.com/odroid-xu4/application_note/gpio/wiringpi)
 4. [SerialTest](https://github.com/WiringPi/WiringPi/blob/master/examples/serialTest.c)
+
+#### Packages to be installed: 
+
+1. Use minicom to test if Tx --> Rx communication is established or not.
+
+Install minicom: `sudo apt-get install minicom`
+
+If java packages are missing when installing minicom, install them using the following commands: 
+
+```
+
+sudo apt-get purge openjdk-8-jre-headless
+sudo apt-get install openjdk-8-jre-headless
+sudo apt-get install openjdk-8-jre
+
+```
+
+Test if a communication line is working by using:
+
+`sudo minicom -D /dev/ttySo`
+ 
+
+`ls -l /dev | grep `
+
+#### Compiling and running 
+
+Compile: gcc -o test test.c -lwiringPi
+Run: ./test
+
+
