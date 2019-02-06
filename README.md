@@ -12,6 +12,8 @@
 2. [Electronics_wing](https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c)
 3. [Odroid](https://wiki.odroid.com/odroid-xu4/application_note/gpio/wiringpi)
 4. [SerialTest](https://github.com/WiringPi/WiringPi/blob/master/examples/serialTest.c)
+5. [Minicom](https://medium.com/@amitasinghchauhan/serial-port-debugging-101-loopback-test-4a7e40da9055)
+
 
 #### Packages to be installed: 
 
@@ -41,4 +43,6 @@ Test if a communication line is working by using:
 Compile: gcc -o test test.c -lwiringPi
 Run: ./test
 
+
+=======
 
