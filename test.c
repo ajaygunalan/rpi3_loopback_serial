@@ -5,7 +5,7 @@
  
 int main(int argc, char ** argv)
 {
-        int fd = serialOpen("/dev/ttyS0",115200);
+        int fd = serialOpen("/dev/serial0",115200);
         char buf[255];
  
         while (1) {
