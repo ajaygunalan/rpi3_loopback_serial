@@ -6,6 +6,8 @@
 1. Why the fuck its not working with two while loop
 2. How to get rid of garbage value?
 
+Make sure UART is **coonfigured** in RPI3, use [this](https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c) as reference. 
+
 #### Reference
 * [PiPinOut](https://www.google.com/search?q=gpio+rpi3+pinout&tbm=isch&source=iu&ictx=1&fir=uzJLoQO8mMNq7M%253A%252CO7iK81du5nUBUM%252C_&usg=AI4_-kT1FivXi9CX71rcYsEdYpg8QoGwvw&sa=X&ved=2ahUKEwiUy67JoangAhVLtI8KHQVkCLQQ9QEwAnoECAUQCA#imgrc=uzJLoQO8mMNq7M:)
 * [wiringPi_Pinout](http://wiringpi.com/pins/)
