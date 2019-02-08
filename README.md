@@ -2,6 +2,11 @@
 #### Compilation
 `gcc -o uart_rpi3_loopback uart_rpi3_loopback.c -lwiringPi`
 
+### Blocking
+
+1. [stack](https://stackoverflow.com/questions/42449987/is-the-write-function-in-c-blocking-or-non-blocking)
+2. [blog](https://eklitzke.org/blocking-io-nonblocking-io-and-epoll)
+
 #### Question?
 1. Why the fuck its not working with two while loop
 2. How to get rid of garbage value?
