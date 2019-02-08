@@ -6,6 +6,7 @@
 
 1. [stack](https://stackoverflow.com/questions/42449987/is-the-write-function-in-c-blocking-or-non-blocking)
 2. [blog](https://eklitzke.org/blocking-io-nonblocking-io-and-epoll)
+3. [a](http://pubs.opengroup.org/onlinepubs/9699919799/functions/write.html)
 
 #### Question?
 1. Why the fuck its not working with two while loop
