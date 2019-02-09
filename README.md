@@ -14,8 +14,10 @@
 * [Odroid](https://wiki.odroid.com/odroid-xu4/application_note/gpio/wiringpi)
 * [SerialTest](https://github.com/WiringPi/WiringPi/blob/master/examples/serialTest.c)
 * [Minicom](https://medium.com/@amitasinghchauhan/serial-port-debugging-101-loopback-test-4a7e40da9055)
-
-
+* [GitHub Discussion] (https://github.com/ARMmbed/mbed-os/issues/1849, https://github.com/ARMmbed/mbed-os/pull/1801)
+* [open function] (http://pubs.opengroup.org/onlinepubs/7908799/xsh/open.html)
+* [Control modes in UART used in WiringPi library](http://www.delorie.com/gnu/docs/glibc/libc_364.html)
+* [Reference for setting input & output baud rate](http://www.delorie.com/gnu/docs/glibc/libc_366.html)
 #### Packages to be installed: 
 
 1. Use minicom to test if Tx --> Rx communication is established or not.
@@ -44,6 +46,19 @@ Test if a communication line is working by using:
 Compile: gcc -o test test.c -lwiringPi
 Run: ./test
 
+#### 8/02/2019 Progress
 
+On running ics.c, the enable pin is high briefly but turns low immediately, not waiting for the data transmission to complete. 
+Need to clear the non blocking io flag.
+
+Created two new files ics_new.c and stoch_kondo.c. stoch_kondo.c is the final library that aims to replace wiringPi completely. 
+I am replacing all the functions in ics_new.c for the ease of testing. Once verified to work properly, the functions are placed in stoch_kondo.c 
+
+Tried replacing the wiringPi library in the ics.c with all posix commands. Too many errors to handle when using this approach. 
+In the end only the open and write functions were incorporated in ics.c 
+
+Increasing the delay in the code to match enable signal with tx line worked. However, it is not dynamic to adapt to transfer any number of bits
+Since the number of bits transmitted in all commands (setPos,getPos,set Curlim etc.), this approach is assumed to work for our purpose
+The delay time to be used in the code is measured by plotting the channels from an Arduino whose code is perfect and has no errors. 
 =======
 
