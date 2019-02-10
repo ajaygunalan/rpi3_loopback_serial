@@ -73,5 +73,8 @@ Since the number of bits transmitted in all commands (setPos,getPos,set Curlim e
 The delay time to be used in the code is measured by plotting the channels from an Arduino whose code is perfect and has no errors.
 
 
-=======
+#### 10/02/2019 Noon: 
+
+IMPORTANT: Added tcdrain(fd) and tcflush(fd) to ics.c and each time the tx pin is high, enable pin goes high. 
+However, enable pin becomes low even during data transmission (i.e, when 0 is transmitted). 
 
