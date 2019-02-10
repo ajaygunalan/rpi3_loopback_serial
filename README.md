@@ -26,6 +26,9 @@ Make sure UART is **configured** in RPI3, use [this](https://www.electronicwings
 * [open function] (http://pubs.opengroup.org/onlinepubs/7908799/xsh/open.html)
 * [Control modes in UART used in WiringPi library](http://www.delorie.com/gnu/docs/glibc/libc_364.html)
 * [Reference for setting input & output baud rate](http://www.delorie.com/gnu/docs/glibc/libc_366.html)
+* [Blocking POSIX (tcdrain)](https://linux.die.net/man/3/tcdrain)
+* [posix serial](https://github.com/cbrake/linux-serial-test/blob/master/linux-serial-test.c)
+
 #### Packages to be installed: 
 
 1. Use minicom to test if Tx --> Rx communication is established or not.
