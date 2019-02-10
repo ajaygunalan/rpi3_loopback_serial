@@ -76,5 +76,29 @@ The delay time to be used in the code is measured by plotting the channels from 
 #### 10/02/2019 Noon: 
 
 IMPORTANT: Added tcdrain(fd) and tcflush(fd) to ics.c and each time the tx pin is high, enable pin goes high. 
-However, enable pin becomes low even during data transmission (i.e, when 0 is transmitted). 
+However, enable pin becomes low even during data transmission (i.e, when 0 is transmitted).
 
+#### Documentation on tcdrain() and tcflush():
+
+[Forum on flushing unused data](https://stackoverflow.com/questions/10938882/how-can-i-flush-unread-data-from-a-tty-input-queue-on-a-unix-system)
+
+1. The use of POSIX function tcflush() is to flush all data there in the object referred by fd, but not transmitted. 
+Usage: `int tcflush(int fildes, int queue_selector);`
+
+2. Types of queue_selectors are as follows: 
+
+	a) TCIFLUSH, it shall flush data received but not read.
+	b) TCOFLUSH, it shall flush data written but not transmitted
+	c) TCIOFLUSH, it shall flush both data received but not read and data written but not transmitted.
+	
+[IBM support page on waiting until o/p is transmitted](https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.bpxbd00/rttcd.htm)
+
+Summary: 
+
+tcdrain() waits till all output sent to fd is actually sent to through the port mentioned by fd
+If successful, tcdrain() will return 0. Else, it returns -1.
+There is an example for usage availble. 
+
+[QNX documentation on tcdrain](http://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_lib_ref/t/tcdrain.html)
+x
+Similar to previous link. Smaller example code for the usage. 
