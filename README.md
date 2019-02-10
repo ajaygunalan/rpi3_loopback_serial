@@ -67,6 +67,8 @@ In the end only the open and write functions were incorporated in ics.c
 
 Increasing the delay in the code to match enable signal with tx line worked. However, it is not dynamic to adapt to transfer any number of bits
 Since the number of bits transmitted in all commands (setPos,getPos,set Curlim etc.), this approach is assumed to work for our purpose
-The delay time to be used in the code is measured by plotting the channels from an Arduino whose code is perfect and has no errors. 
+The delay time to be used in the code is measured by plotting the channels from an Arduino whose code is perfect and has no errors.
+
+
 =======
 
