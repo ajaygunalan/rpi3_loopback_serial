@@ -42,10 +42,10 @@ int main() {
 	wiringPiSetup();
 	pinMode(PIN_NUMBER, OUTPUT);		
 	//enLow
-//int flags;
-//flags = fcntl(fd, F_GETFL);
-//flags &= ~O_NONBLOCK;
-//fcntl(fd, F_SETFL, flags);
+int flags;
+flags = fcntl(fd, F_GETFL);
+flags &= ~O_NONBLOCK;
+fcntl(fd, F_SETFL, flags);
 
         while (1) {
          
@@ -58,6 +58,7 @@ int main() {
                 enHigh
                 //serialPuts(fd, buf);
 		ret_byt = write (fd, buf, strlen (buf));
+		delay(3.2);
 		
 		if(ret_byt ==3){ 
 			flag = 1;
@@ -76,6 +77,7 @@ int main() {
                }
 		if (flag ==1) { 
 		enLow 
+		
 		flag = 0;
 	 }
 		tcdrain(fd);

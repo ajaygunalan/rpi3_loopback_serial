@@ -36,6 +36,7 @@ int main() {
 	if ((fd = open (device, O_RDWR )) == -1)
 	// if ((fd = open (device, O_RDWR | O_NOCTTY | O_NDELAY)) == -1)
 	return -1 ;
+	
 	cfsetispeed (&options, myBaud) ;
 	cfsetospeed (&options, myBaud) ;
 	usleep (10000) ;
@@ -51,7 +52,7 @@ int main() {
         while (1) {
 		
 		enLow
-		/** Assing the Variables **/
+		/** Assigning the Variables **/
                 buf[0] = 0x80 + id;                         //command + servoID
                 buf[1] = ((target_angle >> 7) & 0x007F);    //POS_H
                 buf[2] = (target_angle& 0x007F);            //POS_L
@@ -68,7 +69,7 @@ int main() {
 		
 		if(ret_byt == 3){
 			flag = 1;
-			// printf("%d", ret_byt);
+			// printf("%d /n", ret_byt);
 		}
 		else {
 			flag = 0;
@@ -84,10 +85,11 @@ int main() {
 		**/
 		
 		tx_cmpltd = tcdrain(fd);
+		tcflush(fd, TCIOFLUSH);
 		// enLow
 		
 		/** Set the Enable Low **/
-		if (tx_cmpltd == 0) {
+		if (tx_cmpltd == 0 && flag == 1) {
 			enLow
 			flag = 0;
 			tx_cmpltd = 2;
