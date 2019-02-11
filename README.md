@@ -2,7 +2,23 @@
 #### Compilation
 `gcc -o uart_rpi3_loopback uart_rpi3_loopback.c -lwiringPi`
 
-oscilloscope `800 microseconds`
+With Pi:
+
+Tx Pin:
+
+oscilloscope = `800` microseconds for `115200` BaudPerSec and delay = `3.2` milliseconds
+
+With Arduino:  
+
+Tx Pin:
+
+oscilloscope = `80` microseconds for `115200` BaudPerSec and delay = `0.304` milliseconds
+oscilloscope = `20.00` microseconds for `625000` BaudPerSec and delay = `0.064` milliseconds
+oscilloscope = `8.00` microseconds for `1250000` BaudPerSec and delay = `0.049` milliseconds
+
+Rx Pin:
+
+
 
 ### Blocking
 
@@ -104,3 +120,7 @@ There is an example for usage availble.
 [QNX documentation on tcdrain](http://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_lib_ref/t/tcdrain.html)
 x
 Similar to previous link. Smaller example code for the usage. 
+
+#### 11/02/2019:
+
+Clean up of code is  
