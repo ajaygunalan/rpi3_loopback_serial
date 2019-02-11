@@ -73,14 +73,17 @@ int main() {
 			flag = 0;
 		}
 		
-		/** see the avail no. of bytes in rx and make enable LOW **/
+		/** see the avail no. of bytes in rx and read 1 byte**/
 		int rx_by_ava;
 		while (ioctl (fd, FIONREAD, &rx_by_ava ) > 0) {
-			if (flag == 1 && tcdrain(fd) == 0) {
-				enLow
-				flag = 0;
-			}
+			int garbage;
+			read(fd, &garbage , 1);
+		}
 		
+		/** Set the Enable Low **/
+		if (flag == 1 && tcdrain(fd) == 0) {
+			enLow
+			flag = 0;
 		}
 		
 	
@@ -88,7 +91,7 @@ int main() {
 		/** Read Serial Data**/
 		while (ioctl (fd, FIONREAD, &rx_by_ava ) > 0) {
 			for (int n=0; n<6; n++){
-			incomingByte[n] = serialGetchar(fd);
+			incomingByte[n] = read(fd, &incomingByte, 1);
 			}
 		}
 		
