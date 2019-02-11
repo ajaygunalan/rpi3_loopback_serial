@@ -123,4 +123,16 @@ Similar to previous link. Smaller example code for the usage.
 
 #### 11/02/2019:
 
-Clean up of code is  
+Clean up of code is complete and the expected results on oscilloscope is obtained. Refer top of this document for oscilloscope settings. 
+
+To do: 
+
+1. Write a library for set functions (setPos, setCurlim, setSpd etc.) 
+2. Plot the output of Rx pin using Arduino and try to replicate the same using Rpi3
+3. Figure out how to use the synchronize function in the code
+4. Mimic wave form of Rx pin obtained using Arduino using the Rpi3
+5. Complete kondo_stoch.h library by adding all the get functions (getPos, getSpd etc.)
+6. Make a similar alias using Python and test
+7. Optimisation and threading
+
+

@@ -16,3 +16,4 @@ unsigned int target_angle = 3500;
 unsigned int incomingByte[6];
 
 int setPos(speed_t baud, int pos){
+	
