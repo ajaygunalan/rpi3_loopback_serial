@@ -2,6 +2,8 @@
 #### Compilation
 `gcc -o uart_rpi3_loopback uart_rpi3_loopback.c -lwiringPi`
 
+oscilloscope `800 microseconds`
+
 ### Blocking
 
 1. [stack](https://stackoverflow.com/questions/42449987/is-the-write-function-in-c-blocking-or-non-blocking)

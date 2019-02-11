@@ -24,7 +24,7 @@ unsigned int incomingByte[6];
 uint8_t id = 0;
 const char *device = "/dev/serial0";
 int flag ;
-int ret_byt;
+int ret_byt, tx_cmpltd;
 
 
 int main() {
@@ -50,6 +50,7 @@ int main() {
 
         while (1) {
 		
+		enLow
 		/** Assing the Variables **/
                 buf[0] = 0x80 + id;                         //command + servoID
                 buf[1] = ((target_angle >> 7) & 0x007F);    //POS_H
@@ -73,28 +74,37 @@ int main() {
 			flag = 0;
 		}
 		
-		/** see the avail no. of bytes in rx and read 1 byte**/
+		/** see the avail no. of bytes in rx and read 1 byte 
 		int rx_by_ava;
 		while (ioctl (fd, FIONREAD, &rx_by_ava ) > 0) {
 			int garbage;
 			read(fd, &garbage , 1);
-		}
+		} 
+		
+		**/
+		
+		tx_cmpltd = tcdrain(fd);
+		// enLow
 		
 		/** Set the Enable Low **/
-		if (flag == 1 && tcdrain(fd) == 0) {
+		if (tx_cmpltd == 0) {
 			enLow
 			flag = 0;
+			tx_cmpltd = 2;
 		}
+		
+		
 		
 	
 		
-		/** Read Serial Data**/
+		/** Read Serial Data
 		while (ioctl (fd, FIONREAD, &rx_by_ava ) > 0) {
 			for (int n=0; n<6; n++){
 			incomingByte[n] = read(fd, &incomingByte, 1);
 			}
 		}
 		
+		**/
 		
 		
 
