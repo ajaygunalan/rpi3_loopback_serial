@@ -10,7 +10,8 @@
 3. [spiralray](https://github.com/spiralray/kondo)
 4. [YuuichiAkagaw](https://gist.github.com/YuuichiAkagawa/3682021)
 5. [libkondo](https://bitbucket.org/vo/libkondo4/src)
-
+6. [Kondo_with_ros_comples](https://github.com/longjie/kondo_motor)
+7. [Kondo_with_ros_simple](https://www.ngolongtech.net/2016/12/krs-series-kondo-servo-with-ros.html)
 
 
 With Pi:
