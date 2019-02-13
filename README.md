@@ -8,6 +8,7 @@
 1. [yamaguchi-am](https://github.com/yamaguchi-am/kondo-ics)
 2. [amuthelet](https://github.com/amuthelet/kondo)
 3. [spiralray](https://github.com/spiralray/kondo)
+4. [YuuichiAkagaw](https://gist.github.com/YuuichiAkagawa/3682021)
 
 
 
