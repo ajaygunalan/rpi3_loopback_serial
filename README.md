@@ -3,11 +3,11 @@
 `gcc -o uart_rpi3_loopback uart_rpi3_loopback.c -lwiringPi`
 
 
-#### GitHub Repo
+#### GitHub Repo for Reference
  
-1. [](https://github.com/yamaguchi-am/kondo-ics)
-2. [](https://github.com/amuthelet/kondo)
-3. [](https://github.com/spiralray/kondo)
+1. [yamaguchi-am](https://github.com/yamaguchi-am/kondo-ics)
+2. [amuthelet](https://github.com/amuthelet/kondo)
+3. [spiralray](https://github.com/spiralray/kondo)
 
 
 
