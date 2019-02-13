@@ -9,6 +9,7 @@
 2. [amuthelet](https://github.com/amuthelet/kondo)
 3. [spiralray](https://github.com/spiralray/kondo)
 4. [YuuichiAkagaw](https://gist.github.com/YuuichiAkagawa/3682021)
+5. [libkondo](https://bitbucket.org/vo/libkondo4/src)
 
 
 
