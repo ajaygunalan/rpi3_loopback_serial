@@ -2,6 +2,15 @@
 #### Compilation
 `gcc -o uart_rpi3_loopback uart_rpi3_loopback.c -lwiringPi`
 
+
+#### GitHub Repo
+ 
+1. [](https://github.com/yamaguchi-am/kondo-ics)
+2. [](https://github.com/amuthelet/kondo)
+3. [](https://github.com/spiralray/kondo)
+
+
+
 With Pi:
 
 Tx Pin:
@@ -13,7 +22,9 @@ With Arduino:
 Tx Pin:
 
 oscilloscope = `80` microseconds for `115200` BaudPerSec and delay = `0.304` milliseconds
+
 oscilloscope = `20.00` microseconds for `625000` BaudPerSec and delay = `0.064` milliseconds
+
 oscilloscope = `8.00` microseconds for `1250000` BaudPerSec and delay = `0.049` milliseconds
 
 Rx Pin:
