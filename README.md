@@ -125,6 +125,11 @@ Similar to previous link. Smaller example code for the usage.
 
 Clean up of code is complete and the expected results on oscilloscope is obtained. Refer top of this document for oscilloscope settings. 
 
+
+#### 13th Feb, 2019
+
+calculate the **time taken** for sending one byte in TX in UART in RPI3 and Arduino.
+
 To do: 
 
 1. Write a library for set functions (setPos, setCurlim, setSpd etc.) 
